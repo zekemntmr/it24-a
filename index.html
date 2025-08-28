@@ -25,9 +25,10 @@
     function updateDisplay(){
         var textbox = document.getElementById('textbox');
         var displayText = document.getElementById('displaytext');
+        const d = new Date ();
 
         displayText.textContent = textbox.value;
-        console.log(textbox.value);
+        console.log(textbox.value + d + " " + window.location.hostname);
     }
 
 </script>
