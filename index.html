@@ -2,34 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<>, initial-scale=1.0">
-    <title>IT24-A Event Driven Programming</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
 </head>
 <body>
-    <h1>Hello World</h1>
-    <br>
-    <h3>Musta Kalibutan</h3>
-    <br>
-    <h4>Hello Bai Goodbye</h4>
-    <p>Pastilapan</p>
-    <input type="text"
-        id="textbox"
-        placeholder="PAG TYPE DIRI BAI"
-        oninput="updateDisplay()">
-
-    <h1 id="displaytext">Imong gi type, diri mabutang</h1>
+    <h1 a href="basic-events.html"> Basic Events </h1>
+    <h1 a href="todolist.html"> To-Do List </h1>    
 </body>
 <script>
-    
-    function updateDisplay(){
-        var textbox = document.getElementById('textbox');
-        var displayText = document.getElementById('displaytext');
-        const d = new Date ();
-
-        displayText.textContent = textbox.value;
-        console.log(textbox.value + d + " " + window.location.hostname);
-    }
-
 </script>
-</html>
