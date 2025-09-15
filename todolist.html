@@ -16,6 +16,7 @@
             <ul id="tasklist"> Imong mga trabaho, diri mabutang.....</ul>
 
 <script>
+
     function addTask(){
         const taskText = getTaskText();
 
@@ -34,7 +35,8 @@
         console.log("getTaskText() called: " + input.value);
         return text;
     }
-    function addTaskItem(taskText){
+
+    function addTaskItem(taskText){     
         const li = document.createElement("li");
         li.textContent = taskText;
 
@@ -54,7 +56,17 @@
         li.appendChild(doneBtn);
     }
 
+    function createDeleteButton(li){
+        const deleteBtn = document.createElement("button");
 
+        deleteBtn.textContent="X";
+        deleteBtn.className="delete-btn";
+        deleteBtn.style.marginLeft = "8px";
+        deleteBtn.onclick = () => handleDeleteClick(li);
+
+        console.log("createDeleteButton() called ->", li.textContent);
+        return deleteBtn;
+    }    
 
     function handleDeleteClick(li){
         li.remove();
@@ -71,6 +83,23 @@
         console.log("createEditButton() called =>", taskSpan.textContent);
         return editBtn;
     }
+
+    function handleEditClick(li){
+        const currentText = li.firstChild.textContent.trim();
+        console.log("handleEditClick() -> current:", currentText, Date());
+
+        const newText = prompt("Ilisi imong gibuhat ",currentText);
+
+        if(newText !== null && newText.trim() !== ""){
+            li.firstChild.textContent = newText.trim();
+            console.log("handleEditClick() -> updated to: ",newText.trim(), Date());
+        }else{
+            console.log("handleEditClick() -> way kabag-uhan nahitabo");
+        }
+    }
+
+
+
     function createDoneButton(){
         const doneBtn = document.createElement("button");
         doneBtn.textContent = "Humana";
