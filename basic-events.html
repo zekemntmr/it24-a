@@ -31,5 +31,21 @@
         console.log(textbox.value + d + " " + window.location.hostname);
     }
 
+    function handleDeleteClick(li){
+        li.remove();
+        console.log("handleDeleteClick")
+
+    }    
+    function createEditButton(li, taskSpan){
+        const editBtn = document.createElement("button");
+        editBtn.textContent = "Edit";
+        editBtn.className = "edit-btn";
+        editBtn.style.marginLeft = "8px";
+        editBtn.onclick = () => handleEditClick(li);
+
+        console.log("creadeEditButton() called =>", taskSpan.textContent);
+        return editBtn;
+    }
+
 </script>
 </html>
