@@ -68,10 +68,10 @@
         editBtn.style.marginLeft = "8px";
         editBtn.onclick = () => handleEditClick(li);
 
-        console.log("creadeEditButton() called =>", taskSpan.textContent);
+        console.log("createEditButton() called =>", taskSpan.textContent);
         return editBtn;
     }
-    function createDoneButtin(){
+    function createDoneButton(){
         const doneBtn = document.createElement("button");
         doneBtn.textContent = "Humana";
         doneBtn.onclick = () => {
