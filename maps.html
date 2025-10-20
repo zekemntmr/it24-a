@@ -18,5 +18,43 @@
     <h1>Basic Maps</h1>
     <div id="map"></div>
 </body>
+<script>
 
+
+    function initMap(mapDataUrl){
+        var map = L.map('map').setView([8.360298880257231, 124.86747549200652], 13);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        console.log("Map Loaded " + Date());
+
+        fetch(mapDataUrl)
+            .then(response => response.json())
+            .then(data =>{
+                data.forEach(pin=>{
+                    const marker = L.marker([pin.lat,pin.lng]).addTo(map);
+                    const img = `<img src = '${pin.img}' class="popup-image">`;
+                    
+                    marker.bindPopup(`${img}<br><b> ${pin.title} </b><br> ${pin.description}`);
+
+                    
+
+                    console.log(`${pin.name} Loaded `+ Date());
+
+                });
+            })
+
+            .catch(err=>console.error('Error Loading JSON: ', err));
+
+    }
+
+
+document.addEventListener('DOMContentLoaded',()=>{
+    initMap('maps.json');
+})    
+
+</script>
 </html>
