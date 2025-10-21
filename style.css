@@ -1,5 +1,11 @@
 #map {
     height: 680px;
+    width: 680px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
     }
 
 .popup-image{
