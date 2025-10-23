@@ -1,0 +1,20 @@
+[
+    {
+    "name":"ICS Laboratory 1",
+    "title": "ICS Lab 1",
+    "description":"Computer Lab",
+    "img":"https://imgs.search.brave.com/Jxp83ARPAfXRzIhV2gDeHML640ItCbH-y_Pye6EyuT0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLmt5/bS1jZG4uY29tL3Bo/b3Rvcy9pbWFnZXMv/bmV3c2ZlZWQvMDAz/LzEwNy8zMDAvNDIx/LnBuZw",
+    "lat":8.359620667701337, 
+    "lng":124.86916155796155
+    },
+    {
+    "name":"ICS Laboratory 1",
+    "title": "SC Building",
+    "description":"Rooms",
+    "img":"https://imgs.search.brave.com/5Y5IMBP4peCt2bV80UvndtCllwfWlA2doseHtMMHun8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2ZmLzll/LzE4L2ZmOWUxODQ5/OTYzMmQxMmNhOWQ0/MWJmNDQ1NzkwMjA4/LmpwZw",
+    "lat":8.360188528485526, 
+    "lng":124.86752845203826   
+
+    }
+
+]
